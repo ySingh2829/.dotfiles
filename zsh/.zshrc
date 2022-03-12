@@ -12,11 +12,11 @@ compinit
 # End of lines added by compinstall
 
 # Paths
-PATH="/home/yash33/.cargo/bin:$PATH"
-PATH="/home/yash33/.local/bin:$PATH"
-PATH="/home/yash33/.fnm:$PATH"
-PATH="/home/yash33/anaconda3/bin:$PATH"
-PATH="/home/yash33/anaconda3/condabin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.fnm:$PATH"
+PATH="$HOME/anaconda3/bin:$PATH"
+PATH="$HOME/anaconda3/condabin:$PATH"
 
 # Alias
 alias vi="nvim"
@@ -27,4 +27,4 @@ eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
