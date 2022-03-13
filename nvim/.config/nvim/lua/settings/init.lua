@@ -22,3 +22,5 @@ set.relativenumber = true
 set.cursorline = true
 
 set.hidden = true
+
+vim.cmd[[highlight Visual gui=reverse guifg=None guibg=None]]
