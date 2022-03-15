@@ -1,7 +1,6 @@
 require('settings')
 require('mappings')
 require('colorschemes-config.gruvbox')
---require('colorschemes-config.nightfox')
 require('colorschemes-config.dracula')
 require('packer-config')
 require('nvim-tree-config')
