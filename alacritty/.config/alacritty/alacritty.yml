@@ -13,8 +13,8 @@ key_bindings:
 
 font:
   normal:
-    family: UbuntuMono Nerd Font Mono
-  size: 14
+    family: UbuntuMono NF
+  size: 15
 
 cursor:
   style:

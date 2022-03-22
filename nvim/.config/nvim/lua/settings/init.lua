@@ -20,7 +20,6 @@ set.termguicolors= true
 set.number = true
 set.relativenumber = true
 set.cursorline = true
-
 set.hidden = true
 
 vim.cmd([[au ColorScheme * hi Normal guibg=none]])
