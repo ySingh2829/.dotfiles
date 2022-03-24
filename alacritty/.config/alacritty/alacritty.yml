@@ -13,8 +13,8 @@ key_bindings:
 
 font:
   normal:
-    family: UbuntuMono NF
-  size: 15
+    family: DejaVu Sans Mono NF
+  size: 13
 
 cursor:
   style:
