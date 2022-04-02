@@ -13,7 +13,7 @@ key_bindings:
 
 font:
   normal:
-    family: DejaVu Sans Mono NF
+    family: DejaVu Sans Mono NF 
   size: 13
 
 cursor:
