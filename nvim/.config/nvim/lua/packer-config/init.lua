@@ -18,5 +18,5 @@ return require('packer').startup(function(use)
   use 'Mofiqul/dracula.nvim'
   use 'mfussenegger/nvim-dap'
   use 'simrat39/rust-tools.nvim'
-  use { "ellisonleao/gruvbox.nvim" }
+  use { "morhetz/gruvbox" }
 end)

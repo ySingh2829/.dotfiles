@@ -5,7 +5,7 @@ set.smarttab = true
 set.shiftwidth = 4
 set.tabstop = 4
 
-set.hlsearch = true
+set.hlsearch = false
 set.incsearch = true
 set.ignorecase = true
 set.smartcase = true
