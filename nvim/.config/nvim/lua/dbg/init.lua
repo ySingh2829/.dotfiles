@@ -4,7 +4,7 @@ require('telescope').load_extension('dap')
 require('dbg.python')
 
 -- C/C++ and Rust
-require('dbg.rust')
+require('dbg.lldb')
 
 -- Javascript
 require('dbg.javascript')
