@@ -1,6 +1,14 @@
 local lsp_installer  = require("nvim-lsp-installer")
 
-local opts = { noremap=true, silent=true }
+local extension_path = vim.env.HOME .. '/.vscode/extensions/vadimcn.vscode-lldb-1.7.0/'
+local codelldb_path = extension_path .. 'adapter/codelldb'
+local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
+
+local opts = {
+    noremap=true,
+    silent=true,
+}
+
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
@@ -43,11 +51,17 @@ lsp_installer.settings({
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
+
 lsp_installer.on_server_ready(function(server)
     local default_opts = {
         on_attach = on_attach,
         capabilities = capabilities,
+        dap = {
+            adapter = require('rust-tools.dap').get_codelldb_adapter(
+                codelldb_path, liblldb_path)
+        },
     }
+
     if server.name == "rust_analyzer" then
         -- Initialize the LSP via rust-tools instead
         require("rust-tools").setup {
