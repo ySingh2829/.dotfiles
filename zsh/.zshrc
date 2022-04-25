@@ -2,6 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -24,7 +25,10 @@ alias ls="exa"
 
 # ~/.zshrc
 eval "$(fnm env --use-on-cd)"
-eval "$(starship init zsh)"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# eval "$(starship init zsh)"
 
+source ~/.p10k.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
