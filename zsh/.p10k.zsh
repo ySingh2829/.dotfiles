@@ -53,8 +53,6 @@
   typeset -g POWERLEVEL9K_DIR_CONTENT_EXPANSION='%B$P9K_CONTENT'
 
   # Git status formatter.
-  local res
-
   function my_git_formatter() {
     emulate -L zsh
     if [[ -n $P9K_CONTENT ]]; then
@@ -71,14 +69,11 @@
             VCS_STATUS_NUM_UNSTAGED   || VCS_STATUS_NUM_UNTRACKED )); then
         my_git_format+=" ${1+%3F}✗"
       elif (( VCS_STATUS_COMMITS_BEHIND )); then
-        res+=" ${1+%7F}⇣${vcs_status_commits_behind}"
-        my_git_formst+=$res
+        my_git_format+=" ${1+%7F}⇣${vcs_status_commits_behind}"
       elif (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )); then
-        res+=" "
-        my_git_format+=$res
-      elif (( VCS_STATUS_COMMITS_AHEAD ))
-        res+="${1+%4F}⇡${VCS_STATUS_COMMITS_AHEAD}"
-        my_git_format+=$res
+        my_git_format+=" "
+      elif (( VCS_STATUS_COMMITS_AHEAD )); then
+        my_git_format+="${1+%4F}⇡${VCS_STATUS_COMMITS_AHEAD}"
       fi
     fi
 
