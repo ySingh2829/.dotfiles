@@ -69,7 +69,7 @@
             VCS_STATUS_NUM_UNSTAGED   || VCS_STATUS_NUM_UNTRACKED )); then
         my_git_format+=" ${1+%3F}✗"
       elif (( VCS_STATUS_COMMITS_BEHIND )); then
-        my_git_format+=" ${1+%7F}⇣${vcs_status_commits_behind}"
+        my_git_format+=" ${1+%4F}⇣${VCS_STATUS_COMMITS_BEHIND}"
       elif (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )); then
         my_git_format+=" "
             if (( VCS_STATUS_COMMITS_AHEAD )); then
