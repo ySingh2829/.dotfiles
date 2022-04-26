@@ -48,7 +48,7 @@
   # Cyan current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=cyan
   # Show only the last segment of the current directory.
-  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Bold directory.
   typeset -g POWERLEVEL9K_DIR_CONTENT_EXPANSION='%B$P9K_CONTENT'
 
@@ -68,9 +68,26 @@
       if (( VCS_STATUS_NUM_CONFLICTED || VCS_STATUS_NUM_STAGED ||
             VCS_STATUS_NUM_UNSTAGED   || VCS_STATUS_NUM_UNTRACKED )); then
         my_git_format+=" ${1+%3F}✗"
+      elif (( VCS_STATUS_COMMITS_BEHIND )); then
+        my_git_format+=" ${1+%7F}⇣${vcs_status_commits_behind}"
+      elif (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )); then
+        my_git_format+=" "
+            if (( VCS_STATUS_COMMITS_AHEAD )); then
+            my_git_format+="${1+%4F}⇡${VCS_STATUS_COMMITS_AHEAD}"
+            fi
       fi
     fi
+
+   # TODO:
+   # # ⇠42 if behind the push remote.
+   # (( VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" ⇠${VCS_STATUS_PUSH_COMMITS_BEHIND}"
+   # (( VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" "
+   # # ⇢42 if ahead of the push remote; no leading space if also behind: ⇠42⇢42.
+   # (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && res+="⇢${VCS_STATUS_PUSH_COMMITS_AHEAD}"
+
+   # typeset -g my_git_format=$res
   }
+
   functions -M my_git_formatter 2>/dev/null
 
   # Disable the default Git status formatting.
