@@ -73,7 +73,7 @@
       elif (( VCS_STATUS_COMMITS_BEHIND )); then
         my_git_formst+=" ${1+%7F}⇣ ${vcs_status_commits_behind}"
       elif (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )); then
-        my_git_format+=" ${1+%7F}⇡ ${VCS_STATUS_COMMITS_AHEAD}"
+        my_git_format+=" ${1+%4F}⇡ ${VCS_STATUS_COMMITS_AHEAD}"
 
       fi
     fi
