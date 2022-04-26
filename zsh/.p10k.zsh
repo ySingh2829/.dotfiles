@@ -80,7 +80,7 @@
       fi
     fi
 
-   # TODO:
+   # TODO: push commit status
    # # ⇠42 if behind the push remote.
    # (( VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" ⇠${VCS_STATUS_PUSH_COMMITS_BEHIND}"
    # (( VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" "
