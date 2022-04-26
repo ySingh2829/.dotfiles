@@ -1,4 +1,4 @@
-# Config file for Powerlevel10k with the style of robbyrussell theme from Oh My Zsh.
+
 #
 # Original: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell.
 #
@@ -68,7 +68,9 @@
       if (( VCS_STATUS_NUM_CONFLICTED || VCS_STATUS_NUM_STAGED ||
             VCS_STATUS_NUM_UNSTAGED   || VCS_STATUS_NUM_UNTRACKED )); then
         my_git_format+=" ${1+%3F}✗"
-      elif (( VCS_STATUS_COMMITS_BEHIND )); then
+      fi
+
+      if (( VCS_STATUS_COMMITS_BEHIND )); then
         my_git_format+=" ${1+%4F}⇣${VCS_STATUS_COMMITS_BEHIND}"
       elif (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )); then
         my_git_format+=" "
@@ -78,7 +80,7 @@
       fi
     fi
 
-   # TODO:
+   # TODO: push commit status
    # # ⇠42 if behind the push remote.
    # (( VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" ⇠${VCS_STATUS_PUSH_COMMITS_BEHIND}"
    # (( VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" "
