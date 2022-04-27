@@ -28,6 +28,7 @@ eval "$(fnm env --use-on-cd)"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # eval "$(starship init zsh)"
 
+source /usr/share/fzf/shell/key-bindings.zsh
 source ~/.p10k.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
