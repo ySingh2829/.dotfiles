@@ -25,6 +25,8 @@ alias ls="exa"
 
 # ~/.zshrc
 eval "$(fnm env --use-on-cd)"
+
+# Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # eval "$(starship init zsh)"
 
