@@ -180,6 +180,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id feh --no-fehbg --bg-fill '/home/yash33/Pictures/homer-simpson-alone-life-4k-c0.jpg'  
+set $i3lockwall i3lock -c 000000
+
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 # Picom
 exec_always --no-startup-id picom &

@@ -21,7 +21,7 @@ PATH="$HOME/anaconda3/condabin:$PATH"
 
 # Alias
 alias vi="nvim"
-alias ls="exa"
+alias monitor2="xrandr --output HDMI-1 --mode 1920x1080 --right-of eDP-1 && feh --no-fehbg --bg-fill '/home/yash33/Pictures/homer-simpson-alone-life-4k-c0.jpg'"
 
 # ~/.zshrc
 eval "$(fnm env --use-on-cd)"
