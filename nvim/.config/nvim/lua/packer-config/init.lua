@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   -- Colorschemes plugins
   use { "morhetz/gruvbox" }  --Colorscheme gruvbox
   use 'Mofiqul/dracula.nvim' --Colorscheme dracula
+  use 'lifepillar/vim-solarized8'  --Colorscheme solarized
 
   -- Git Fugitive
   use 'tpope/vim-fugitive'

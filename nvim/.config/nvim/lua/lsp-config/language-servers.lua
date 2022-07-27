@@ -60,6 +60,11 @@ lsp_installer.on_server_ready(function(server)
             adapter = require('rust-tools.dap').get_codelldb_adapter(
                 codelldb_path, liblldb_path)
         },
+        settings = {
+            Lua = {
+                diagnostics = { globals = { 'vim' } }
+            }
+        }
     }
 
     if server.name == "rust_analyzer" then
