@@ -22,4 +22,4 @@ set.relativenumber = true
 set.cursorline = true
 set.hidden = true
 
-vim.cmd([[au ColorScheme * hi Normal guibg=none]])
+--vim.cmd([[au ColorScheme * hi Normal guibg=none]])
