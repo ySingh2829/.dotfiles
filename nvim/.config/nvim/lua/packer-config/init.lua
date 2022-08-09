@@ -13,6 +13,10 @@ return require('packer').startup(function(use)
 
   -- LSP configurations plugins
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use {
+    "williamboman/mason.nvim",
+  }
+  use "williamboman/mason-lspconfig.nvim"
   use 'onsails/lspkind-nvim'
   use 'williamboman/nvim-lsp-installer'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -20,6 +24,31 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'nvim-lualine/lualine.nvim' -- LuaLine
+
+  -- Linting and formatting
+  use {
+      'jose-elias-alvarez/null-ls.nvim',
+       require("null-ls").setup({
+           sources = {
+           require("null-ls").builtins.formatting.stylua,
+           require("null-ls").builtins.diagnostics.eslint,
+           require("null-ls").builtins.completion.spell,
+           },
+       })
+   }
+
+  -- Diagnostics
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
 
   -- Debugging plugins
   use {'mfussenegger/nvim-dap'} -- Debugger
