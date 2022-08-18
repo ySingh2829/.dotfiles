@@ -33,5 +33,5 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source /usr/share/fzf/shell/key-bindings.zsh
 source ~/.p10k.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme

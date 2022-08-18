@@ -2,7 +2,7 @@ local dap = require('dap')
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = 'executable',
-  command = '/home/yash33/extension/debugAdapters/bin/OpenDebugAD7',
+  command = 'OpenDebugAD7',
 }
 
 local dap = require('dap')

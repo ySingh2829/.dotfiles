@@ -3,11 +3,14 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {
         'python',
         'lua',
-        'fish',
         'html',
         'javascript',
         'rust',
         'typescript',
+        'c',
+        'cpp',
+        'go',
+        'sql',
   },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
