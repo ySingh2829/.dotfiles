@@ -5,20 +5,35 @@ return require('packer').startup(function(use)
   -- Treesitter Plugin
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  -- Fuzzy finder plugin
+  -- Telescope plugin
   use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+  -- FZF sorter for telescope
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  -- Fuzzy finder plugin
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
 
   -- LSP configurations plugins
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use "williamboman/mason.nvim"
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim"
+      "williamboman/mason-lspconfig.nvim",
+      require("mason-lspconfig").setup({
+          ensure_installed = {
+              "sumneko_lua",
+              "rust_analyzer",
+              "tsserver",
+              "pyright",
+              "gopls",
+              "clangd",
+          }
+      })
   }
   use 'onsails/lspkind-nvim'
-  --use 'williamboman/nvim-lsp-installer'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
@@ -58,7 +73,7 @@ return require('packer').startup(function(use)
   use 'ayu-theme/ayu-vim'       --Colorscheme ayu
   use 'rakr/vim-one'            --Colorscheme vim-one
 
-  -- Git Fugitive
+  -- Vit Fugitive
   use 'tpope/vim-fugitive'
 
 end)

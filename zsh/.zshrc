@@ -31,7 +31,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # eval "$(starship init zsh)"
 
 source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/shell/completion.zsh
+
+# fzf ctrl-r and alt-c behavior
+FD_OPTIONS="--hidden --follow --exclude .git --exclude node_modules"
+# Use git ls-files inside git ripo, otherwise fd
+export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f 1 $FD_OPTIONS"
+export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+
 source ~/.p10k.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+
