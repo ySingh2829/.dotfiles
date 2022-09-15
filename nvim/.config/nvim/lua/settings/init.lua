@@ -10,17 +10,20 @@ set.hlsearch = true
 set.incsearch = true
 set.ignorecase = true
 set.smartcase = true
+set.smartindent = true
 
 set.splitbelow = true
 set.splitright = true
 set.wrap = false
-set.scrolloff = 5
+set.scrolloff = 8
 set.fileencoding = 'utf-8'
-set.termguicolors= true
+set.termguicolors = true
+--set.signcolumn = "yes"
 
 set.number = true
 set.relativenumber = true
---set.cursorline = true
 set.hidden = true
 
-vim.cmd([[au ColorScheme * hi Normal guibg=none]])
+set.guicursor = 'n-v-c-sm:block,ci-ve:ver25,r-cr-o:hor20,i:block-blinkwait700-blinkoff400-blinkon250-Cursor/lCursor'
+
+--vim.cmd([[au ColorScheme * hi Normal guibg=none]])

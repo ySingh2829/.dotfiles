@@ -1,4 +1,4 @@
 vim.opt.termguicolors = true
-vim.o.background = "dark"
-vim.cmd([[colorscheme solarized8_high]])
+vim.o.background = "light"
+vim.cmd([[colorscheme solarized8]])
 vim.cmd([[highlight Visual gui=reverse guifg=none guibg=none]])

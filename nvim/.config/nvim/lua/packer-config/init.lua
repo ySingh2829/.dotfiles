@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
   -- Treesitter Plugin
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   -- Telescope plugin
   use {
@@ -37,8 +38,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use({'L3MON4D3/LuaSnip' , tag = "v<CurrentMajor>.*"}) -- Snippets plugin
   use 'nvim-lualine/lualine.nvim' -- LuaLine
+  use 'rafamadriz/friendly-snippets' -- friendly snippets
 
   -- Linting and formatting
   use { 'jose-elias-alvarez/null-ls.nvim' }
@@ -67,11 +69,12 @@ return require('packer').startup(function(use)
   use 'simrat39/rust-tools.nvim'
 
   -- Colorschemes plugins
-  use { "morhetz/gruvbox" }  --Colorscheme gruvbox
-  use 'Mofiqul/dracula.nvim' --Colorscheme dracula
-  use 'lifepillar/vim-solarized8'  --Colorscheme solarized
-  use 'ayu-theme/ayu-vim'       --Colorscheme ayu
-  use 'rakr/vim-one'            --Colorscheme vim-one
+  use { "morhetz/gruvbox" }  -- Colorscheme gruvbox
+  use 'Mofiqul/dracula.nvim' -- Colorscheme dracula
+  use 'lifepillar/vim-solarized8'  -- Colorscheme solarized
+  use 'ayu-theme/ayu-vim'       -- Colorscheme ayu
+  use 'rakr/vim-one'            -- Colorscheme vim-one
+  use 'franbach/miramare'       -- Colorscheme Miramare
 
   -- Vit Fugitive
   use 'tpope/vim-fugitive'

@@ -5,8 +5,8 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.9
-  decorations: none
+  opacity: 0.8
+  decorations: None
 
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
@@ -15,7 +15,7 @@ font:
   normal:
     family: DejaVu Sans Mono NF
     style: Regular
-  size: 12.5
+  size: 11.0
 
 cursor:
   style:
@@ -26,7 +26,8 @@ colors:
   # Default colors
   primary:
     background: '0x0D0208'
-    foreground: '0x4AF626'
+      # foreground: '0xe5e9f0'
+    foreground: '0x4AF626'  # Green
 
   # Normal colors
   normal:
