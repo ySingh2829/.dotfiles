@@ -23,6 +23,9 @@
  "bp" '(previous-buffer :which-key "previous buffer")
  "bk" '(kill-buffer :which-key "kill buffer")
 
+ "o" '(nil :which-key "open")
+ "ov" '(vterm-mode :which-key "vterm")
+
  ;; Git
  "g" '(nil :which-key "git")
  "gs" '(magit-status :which-key "status")

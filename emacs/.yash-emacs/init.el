@@ -47,6 +47,9 @@
 ;; What's in the Box!!
 (setq evil-insert-state-cursor 'box)
 
+;;================== Vterm ====================;;
+(use-package vterm)
+
 ;;================== External Setting ==================;;
 
 (load-file "~/.yash-emacs/personal-settings.el")

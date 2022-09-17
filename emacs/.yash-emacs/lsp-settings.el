@@ -9,7 +9,6 @@
    rustic-lsp-client 'eglot
    rustic-format-on-save t))
 
-
 ;; Tree-sitter
 (use-package tree-sitter)
 (use-package tree-sitter-langs)

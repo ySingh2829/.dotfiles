@@ -5,7 +5,7 @@
 (tooltip-mode -1)           ; Disable toolstips
 (set-fringe-mode 10)        ; Give some breathing room
 
-(menu-bar-mode -1)          ; Disable the menu
+(menu-bar-mode 1)          ; Disable the menu
 
 ;; Set up the visible bell
 (setq visible-bell nil)
@@ -36,7 +36,7 @@
   ;;Gloabal settings (defaults)
   (setq doom-themes-enable-bold nil    ; if nil, bold is universally disabled
 	doom-themes-enable-italic nil) ; if nil, italics is universally disabled
-  (load-theme 'leuven t)
+  (load-theme 'doom-one t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
