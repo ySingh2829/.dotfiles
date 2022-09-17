@@ -4,7 +4,6 @@
 
 (general-define-key
  :states '(normal motion visual)
- :keymaps 'override
  "K" 'helpful-at-point
  "C-=" 'text-scale-increase
  "C--" 'text-scale-decrease)
