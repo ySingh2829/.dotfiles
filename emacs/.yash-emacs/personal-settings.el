@@ -29,14 +29,15 @@
 (setq hscroll-step 1)
 (setq hscroll-margin 1)
 
+;;(load-theme 'leuven)
 
 ;; Theme
 (use-package doom-themes
   :config
   ;;Gloabal settings (defaults)
-  (setq doom-themes-enable-bold nil    ; if nil, bold is universally disabled
-	doom-themes-enable-italic nil) ; if nil, italics is universally disabled
-  (load-theme 'doom-one t)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+	doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-one nil)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -48,4 +49,3 @@
   :diminish which-key-mode
   :config
   (setq which-key-idle-delay 1.0))
-

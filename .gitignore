@@ -4,6 +4,12 @@
 /emacs/.yash-emacs/history
 /emacs/.yash-emacs/eshell
 /emacs/.yash-emacs/transient
+/emacs/.yash-emacs/.cache
+/emacs/.yash-emacs/ede-projects.el
+/emacs/.yash-emacs/eln-cache
+/emacs/.yash-emacs/projects
+/emacs/.yash-emacs/.dap-breakpoints
+/emacs/.yash-emacs/forge-database.sqlite
 
 # -*- mode: gitignore; -*-
 *~

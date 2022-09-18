@@ -27,18 +27,14 @@
  "ov" '(vterm-mode :which-key "vterm")
 
  ;; Git
- "g" '(nil :which-key "git")
- "gs" '(magit-status :which-key "status")
- "gf" '(magit-fetch :which-key "fetch")
- "gp" '(magit-push :which-key "push")
- "gm" '(magit-merge :which-key "merge")
- "gr" '(magit-rebase :which-key "rebase")
+ "g" '(magit-status :which-key "magit-status")
 
  ;; Files
  "f" '(nil :which-key "files")
  "fd" '(dired :which-key "dired")
  "fl" '(consult-line :which-key "search line")
- "ff" '(consult-find :which-key "find")
+ "ff" '(consult-fd :which-key "consult-fd")
+ "fF" '(consult-find :which-key "consult-find")
  "fL" '(consult-locate :whick-key "locate file")
  "fg" '(consult-grep :which-key "grep file")
  "fr" '(consult-ripgrep :which-key "ripgrep file"))
