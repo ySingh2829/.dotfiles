@@ -68,13 +68,14 @@ return require('packer').startup(function(use)
   -- Rust tools for rust analyzer
   use 'simrat39/rust-tools.nvim'
 
-  -- Colorschemes plugins
+  -- Themes plugins
   use { "morhetz/gruvbox" }  -- Colorscheme gruvbox
   use 'Mofiqul/dracula.nvim' -- Colorscheme dracula
   use 'lifepillar/vim-solarized8'  -- Colorscheme solarized
   use 'ayu-theme/ayu-vim'       -- Colorscheme ayu
   use 'rakr/vim-one'            -- Colorscheme vim-one
   use 'franbach/miramare'       -- Colorscheme Miramare
+  use { 'sonph/onehalf', rtp = 'vim' }            -- Colorscheme one-half
 
   -- Vit Fugitive
   use 'tpope/vim-fugitive'

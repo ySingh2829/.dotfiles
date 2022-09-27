@@ -31,7 +31,7 @@
 (add-to-list 'native-comp-eln-load-path (expand-file-name "eln-cache/" user-emacs-directory))
 
 ;; You know how it is!!
-(set-face-attribute 'default nil :family "Liberation Mono" :height 120)
+(set-face-attribute 'default nil :family "DejaVu Sans Mono NF" :height 150)
 
 ;;================== HERESY ======================;;
 ;; Evil package

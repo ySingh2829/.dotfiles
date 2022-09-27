@@ -3,11 +3,12 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 
 -- buffer mappings
+map('n', '<leader>`', ":blast<CR>", opts)
 map('n', '<leader><leader>', ":bnext<CR>", opts)
 map('n', '<leader>bp', ":bprevious<CR>", opts)
 
 -- telescope mapping
-map('n', '<leader>ff', ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", opts)
+map('n', '<leader>ff', ":Telescope find_files<CR>", opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 map('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
