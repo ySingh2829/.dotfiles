@@ -77,7 +77,13 @@ return require('packer').startup(function(use)
   use 'franbach/miramare'       -- Colorscheme Miramare
   use { 'sonph/onehalf', rtp = 'vim' }            -- Colorscheme one-half
 
-  -- Vit Fugitive
-  use 'tpope/vim-fugitive'
+  -- Git plugins
+  use 'tpope/vim-fugitive'  -- Vim fugitive
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
 end)
