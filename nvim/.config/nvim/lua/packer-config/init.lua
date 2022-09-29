@@ -76,6 +76,8 @@ return require('packer').startup(function(use)
   use 'rakr/vim-one'            -- Colorscheme vim-one
   use 'franbach/miramare'       -- Colorscheme Miramare
   use { 'sonph/onehalf', rtp = 'vim' }            -- Colorscheme one-half
+  use 'jnurmine/Zenburn'  -- Colorscheme Zenburn
+  use 'savq/melange'    -- Colorscheme Melange
 
   -- Git plugins
   use 'tpope/vim-fugitive'  -- Vim fugitive

@@ -1,5 +1,6 @@
 require('settings')
 require('mappings')
+--require('colorschemes-config.zenburn')
 require('colorschemes-config.gruvbox')
 --require('colorschemes-config.dracula')
 --require('colorschemes-config.solarized')
