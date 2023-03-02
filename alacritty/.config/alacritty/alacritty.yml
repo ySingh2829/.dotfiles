@@ -5,7 +5,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.8
+  opacity: 0.9
   decorations: None
 
 key_bindings:
@@ -13,9 +13,17 @@ key_bindings:
 
 font:
   normal:
-    family: Hack
+    # family: JetBrains Mono NL
+    # family: Hack
+    # family: Fira Code
+    # family: DejaVu Sans Mono NF
+    # family: Meslo LG S NF
+    family: Sauce Code Pro NF
     style: Regular
-  size: 13.5
+  size: 13
+  offset:
+    x: 0
+    y: 0
 
 cursor:
   style:
@@ -27,7 +35,7 @@ colors:
   primary:
     background: '0x0D0208'
     foreground: '0xe5e9f0'
-      #foreground: '0x4AF626'  # Green
+      # foreground: '0x4AF626'  # Green
 
   # Normal colors
   normal:

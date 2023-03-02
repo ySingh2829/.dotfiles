@@ -31,7 +31,8 @@
 (add-to-list 'native-comp-eln-load-path (expand-file-name "eln-cache/" user-emacs-directory))
 
 ;; You know how it is!!
-(set-face-attribute 'default nil :family "Hack" :height 150)
+(add-to-list 'default-frame-alist '(font . "JetBrains Mono NL"))
+(set-face-attribute 'default t :font "JetBrains Mono NL")
 
 ;;================== HERESY ======================;;
 ;; Evil package

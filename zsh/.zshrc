@@ -26,8 +26,8 @@ PATH="$HOME/.fnm:$PATH"
 PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 PATH="$HOME/doom-emacs/bin:$PATH"
 PATH="$HOME/bin/:$PATH"
-# PATH="$HOME/anaconda3/bin:$PATH"
-# PATH="$HOME/anaconda3/condabin:$PATH"
+PATH="$HOME/anaconda3/bin:$PATH"
+PATH="$HOME/anaconda3/condabin:$PATH"
 
 # Alias
 alias vi="nvim"

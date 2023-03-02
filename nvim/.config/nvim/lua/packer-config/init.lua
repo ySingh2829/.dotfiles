@@ -19,21 +19,9 @@ return require('packer').startup(function(use)
   use 'junegunn/fzf.vim'
 
   -- LSP configurations plugins
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use "williamboman/mason.nvim"
-  use {
-      "williamboman/mason-lspconfig.nvim",
-      require("mason-lspconfig").setup({
-          ensure_installed = {
-              "sumneko_lua",
-              "rust_analyzer",
-              "tsserver",
-              "pyright",
-              "gopls",
-              "clangd",
-          }
-      })
-  }
+  use "williamboman/mason-lspconfig.nvim"
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
